@@ -36,9 +36,9 @@ $(document).ready(function (){
             +data.email+'</td><td>'
             +data.address+'</td><td>'            
             +data.position+'</td><td>'+data.joinDate
-            +'</td><td><button class="btn btn-info" onclick="showData('+data.id
-            +')"><i class="fas fa-edit"></i></button><button class="btn btn-danger" onclick="deleteData('
-            +data.id+')"><i class="fas fa-trash-alt"></i></button></td>';
+            +'</td><td><div class="btn-group btn-group-sm"><button class="btn btn-secondary btn" onclick="showData('+data.id
+            +')"><i class="fas fa-edit"></i></button><button class="btn btn-secondary" onclick="deleteData('
+            +data.id+')"><i class="fas fa-trash-alt"></i></button></div></td>';
         strHtml += '</tr>';
     });
     $('#tableData').append(strHtml);
@@ -58,10 +58,20 @@ let showData = function(id){
         $('#address').val(x.address);
         $('#joinDate').val(x.joinDate);
         $('#email').val(x.email);
-    }    
+    }
     $('#popUpOverlay').css('display','block');
+    $('#fName').focus();
 }
+
 let hideData = function(){
     $('#popUpOverlay').css('display','none');
     $('#formData').trigger('reset');
 }
+$('#popUpOverlay').click(function() {
+    //Hide the menus if visible
+    hideData();
+  });
+  
+  $('#popUpBody').click(function(event){
+    event.stopPropagation();
+  });

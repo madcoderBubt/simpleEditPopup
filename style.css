@@ -1,5 +1,5 @@
 #popUpOverlay{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -7,6 +7,7 @@
     background: rgb(0 0 0/50%);
     /* opacity: .5; */
     /* color: white;*/
+    overflow: scroll;
 }
 .popUpForm{
     margin: 10px auto;
