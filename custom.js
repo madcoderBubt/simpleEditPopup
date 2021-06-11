@@ -1,10 +1,10 @@
 let dummyData = [
     {
         id:1,
-        fName:"Dinna",
-        lName : "Chakma",
+        fName:"Smita",
+        lName : "Dey",
         email : "abc@xyz.com",
-        position:"front-end-developer",
+        position:"Graphics Designer",
         joinDate:"1/6/2021",
         address:"Mirpur"
     },{
